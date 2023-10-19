@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mayank
+  name: mayank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mayank
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mayank
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: 
+          requests: 
+            cpu: 100m
+            memory: 100Mi
+          limits: 
+            memory: 500Mi
+            cpu: 500m

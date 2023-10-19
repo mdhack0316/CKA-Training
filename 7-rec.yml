@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mayank
+  name: mayank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mayank
+  strategy: 
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mayank
+    spec:
+      containers:
+      - image: mdhack/strategy:v1
+        name: nginx
+        resources: {}
+status: {}

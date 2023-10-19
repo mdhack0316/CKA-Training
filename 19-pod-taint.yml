@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: testpod
+spec:
+ containers: 
+ - name: test
+   image: httpd
+ tolerations: 
+ - key: mayank
+   operator: Equal
+   value: test
+   effect: PreferNoSchedule
