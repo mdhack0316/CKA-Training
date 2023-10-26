@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: sa
+  name: sa
+spec:
+  serviceAccountName: mayank 
+  containers:
+  - image: gcr.io/google-samples/node-hello:1.0
+    name: sa
